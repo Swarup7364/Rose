@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Hey Hey ✨</title>
-    <link rel="icon" type="img/jpg" href="https://c4.wallpaperflare.com/wallpaper/812/187/770/kimi-no-na-wa-tachibana-taki-miyamizu-mitsuha-anime-wallpaper-preview.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hey Hey ✨</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="img/jpg"
+href="https://c4.wallpaperflare.com/wallpaper/812/187/770/kimi-no-na-wa-tachibana-taki-miyamizu-mitsuha-anime-wallpaper-preview.jpg">
 
 </head>
 <body>
-  
-<div class="rose">
+
+<div class="rose" onclick="openRose()">
+  <!-- petals -->
   <div class="petal"></div>
   <div class="petal"></div>
   <div class="petal"></div>
@@ -29,32 +33,30 @@
   <div class="petal"></div>
   <div class="petal"></div>
   <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
-  <div class="petal"></div>
+
   <div class="text">
-      <span>Happy Rose Day &#127801;
-            my love Sushmita &#128536;
+      <span>
+        Happy Rose Day 🌹 <br>
+        my love Sushmita 😘
       </span>
   </div>
 </div>
-<span id="prompt">Touch the rose</span>
 
-<div style="display: none;">
-  <audio autoplay="" loop="" controls="">
-    <source src="Song.mp3" type="audio/mp3">
-  </audio>
-</div>
+<span id="prompt">Touch the rose ❤️</span>
+
+<audio id="song" loop>
+  <source src="Song.mp3" type="audio/mp3">
+</audio>
+
+<script>
+function openRose() {
+    document.querySelector(".rose").classList.add("open");
+    document.getElementById("prompt").style.display="none";
+
+    const music = document.getElementById("song");
+    music.play();
+}
+</script>
 
 </body>
-
 </html>
